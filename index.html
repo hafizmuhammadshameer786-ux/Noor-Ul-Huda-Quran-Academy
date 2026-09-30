@@ -1,0 +1,4648 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Noor-ul-Huda Quran Academy | أكاديمية نور الهدى</title>
+
+    <meta name="description"
+          content="Noor-ul-Huda Quran Academy - Online Quran, Tajweed, Nazra, Hifz and Islamic Education">
+
+    <style>
+
+        /* =====================================================
+           GLOBAL SETTINGS
+        ===================================================== */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        :root {
+
+            --dark-green: #032d22;
+            --deep-green: #064e3b;
+            --green: #087f5b;
+            --light-green: #10b981;
+
+            --gold: #d4af37;
+            --light-gold: #f6df8b;
+
+            --cream: #fffdf5;
+            --white: #ffffff;
+
+            --text: #19382f;
+
+            --shadow:
+                0 15px 45px rgba(0, 0, 0, 0.10);
+
+        }
+
+        body {
+
+            font-family:
+                "Segoe UI",
+                Tahoma,
+                Arial,
+                sans-serif;
+
+            color: var(--text);
+
+            background:
+                #f4fbf7;
+
+            line-height: 1.8;
+
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        button,
+        input,
+        select,
+        textarea {
+            font-family: inherit;
+        }
+
+
+        /* =====================================================
+           ISLAMIC BACKGROUND DECORATIONS
+        ===================================================== */
+
+        .islamic-background {
+
+            position: fixed;
+
+            inset: 0;
+
+            pointer-events: none;
+
+            z-index: -1;
+
+            overflow: hidden;
+
+            background:
+
+                radial-gradient(
+                    circle at 10% 20%,
+                    rgba(16,185,129,0.08),
+                    transparent 25%
+                ),
+
+                radial-gradient(
+                    circle at 90% 70%,
+                    rgba(212,175,55,0.10),
+                    transparent 25%
+                );
+
+        }
+
+
+        .floating-ayah {
+
+            position: absolute;
+
+            font-family:
+                "Times New Roman",
+                serif;
+
+            color:
+                rgba(5, 78, 59, 0.055);
+
+            font-size: 55px;
+
+            white-space: nowrap;
+
+            transform: rotate(-8deg);
+
+            user-select: none;
+
+        }
+
+        .ayah-1 {
+            top: 12%;
+            left: -30px;
+        }
+
+        .ayah-2 {
+            top: 38%;
+            right: -100px;
+            transform: rotate(8deg);
+        }
+
+        .ayah-3 {
+            top: 67%;
+            left: -100px;
+        }
+
+        .ayah-4 {
+            bottom: 5%;
+            right: -80px;
+            transform: rotate(-5deg);
+        }
+
+
+        /* =====================================================
+           HEADER
+        ===================================================== */
+
+        header {
+
+            position: sticky;
+
+            top: 0;
+
+            z-index: 1000;
+
+            background:
+                rgba(255,255,255,0.96);
+
+            backdrop-filter:
+                blur(18px);
+
+            border-bottom:
+                1px solid rgba(212,175,55,0.25);
+
+            box-shadow:
+                0 5px 25px rgba(0,0,0,0.08);
+
+        }
+
+
+        .navbar {
+
+            max-width: 1250px;
+
+            margin: auto;
+
+            padding: 12px 25px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            gap: 20px;
+
+        }
+
+
+        /* =====================================================
+           LOGO
+        ===================================================== */
+
+        .logo {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 13px;
+
+            color: var(--dark-green);
+
+        }
+
+
+        .logo-icon {
+
+            width: 58px;
+
+            height: 58px;
+
+            border-radius: 50%;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            color: white;
+
+            font-size: 28px;
+
+            background:
+
+                radial-gradient(
+                    circle,
+                    var(--green),
+                    var(--dark-green)
+                );
+
+            border:
+                2px solid var(--gold);
+
+            box-shadow:
+                0 5px 20px rgba(6,78,59,0.25);
+
+        }
+
+
+        .logo-text h1 {
+
+            font-family:
+                Georgia,
+                serif;
+
+            color:
+                var(--dark-green);
+
+            font-size:
+                22px;
+
+            line-height:
+                1.3;
+
+        }
+
+
+        .logo-text .arabic {
+
+            display: block;
+
+            color:
+                #a67c14;
+
+            font-family:
+                "Times New Roman",
+                serif;
+
+            font-size:
+                15px;
+
+            direction:
+                rtl;
+
+        }
+
+
+        /* =====================================================
+           NAVIGATION
+        ===================================================== */
+
+        nav {
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            gap:
+                5px;
+
+            flex-wrap:
+                wrap;
+
+            justify-content:
+                center;
+
+        }
+
+
+        nav a {
+
+            color:
+                var(--dark-green);
+
+            padding:
+                8px 13px;
+
+            border-radius:
+                25px;
+
+            font-size:
+                14px;
+
+            transition:
+                0.3s;
+
+        }
+
+
+        nav a:hover {
+
+            color:
+                white;
+
+            background:
+                var(--deep-green);
+
+            transform:
+                translateY(-2px);
+
+        }
+
+
+        .nav-contact {
+
+            color:
+                white !important;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    var(--dark-green),
+                    var(--green)
+                );
+
+        }
+
+
+        /* =====================================================
+           HERO
+        ===================================================== */
+
+        .hero {
+
+            min-height:
+                720px;
+
+            position:
+                relative;
+
+            overflow:
+                hidden;
+
+            color:
+                white;
+
+            background:
+
+                linear-gradient(
+                    135deg,
+                    rgba(1,43,32,0.98),
+                    rgba(4,78,59,0.96),
+                    rgba(8,127,91,0.92)
+                );
+
+        }
+
+
+        /* Golden decorative circles */
+
+        .hero::before {
+
+            content: "";
+
+            position: absolute;
+
+            width: 500px;
+
+            height: 500px;
+
+            border-radius: 50%;
+
+            border:
+                1px solid rgba(244,215,123,0.25);
+
+            top:
+                -250px;
+
+            right:
+                -100px;
+
+        }
+
+
+        .hero::after {
+
+            content: "";
+
+            position: absolute;
+
+            width: 420px;
+
+            height: 420px;
+
+            border-radius: 50%;
+
+            border:
+                1px solid rgba(244,215,123,0.20);
+
+            bottom:
+                -250px;
+
+            left:
+                -120px;
+
+        }
+
+
+        .hero-pattern {
+
+            position:
+                absolute;
+
+            inset:
+                0;
+
+            opacity:
+                0.10;
+
+            background-image:
+
+                linear-gradient(
+                    30deg,
+                    #d4af37 12%,
+                    transparent 12.5%,
+                    transparent 87%,
+                    #d4af37 87.5%,
+                    #d4af37
+                ),
+
+                linear-gradient(
+                    150deg,
+                    #d4af37 12%,
+                    transparent 12.5%,
+                    transparent 87%,
+                    #d4af37 87.5%,
+                    #d4af37
+                );
+
+            background-size:
+                80px 140px;
+
+        }
+
+
+        .hero-container {
+
+            max-width:
+                1200px;
+
+            width:
+                100%;
+
+            min-height:
+                720px;
+
+            margin:
+                auto;
+
+            padding:
+                80px 25px;
+
+            display:
+                grid;
+
+            grid-template-columns:
+                1.25fr 0.75fr;
+
+            gap:
+                60px;
+
+            align-items:
+                center;
+
+            position:
+                relative;
+
+            z-index:
+                2;
+
+        }
+
+
+        .hero-content {
+
+            text-align:
+                left;
+
+        }
+
+
+        .bismillah {
+
+            font-family:
+                "Times New Roman",
+                serif;
+
+            font-size:
+                30px;
+
+            color:
+                var(--light-gold);
+
+            margin-bottom:
+                18px;
+
+        }
+
+
+        .academy-small {
+
+            display:
+                inline-block;
+
+            padding:
+                7px 18px;
+
+            border:
+                1px solid rgba(244,215,123,0.5);
+
+            border-radius:
+                30px;
+
+            color:
+                #fff6c8;
+
+            font-size:
+                14px;
+
+            margin-bottom:
+                18px;
+
+            letter-spacing:
+                0.5px;
+
+        }
+
+
+        .hero-title {
+
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+
+            font-size:
+                clamp(48px, 7vw, 82px);
+
+            line-height:
+                1.05;
+
+            color:
+                #ffeaa0;
+
+            text-shadow:
+                0 4px 20px rgba(0,0,0,0.20);
+
+        }
+
+
+        .hero-arabic {
+
+            font-family:
+                "Times New Roman",
+                serif;
+
+            font-size:
+                39px;
+
+            margin-top:
+                10px;
+
+            color:
+                white;
+
+        }
+
+
+        .hero-subtitle {
+
+            font-size:
+                26px;
+
+            margin-top:
+                5px;
+
+            color:
+                #d9fff1;
+
+        }
+
+
+        .hero-description {
+
+            max-width:
+                680px;
+
+            margin:
+                20px 0 30px;
+
+            color:
+                #e8fff7;
+
+            font-size:
+                17px;
+
+        }
+
+
+        .hero-buttons {
+
+            display:
+                flex;
+
+            gap:
+                15px;
+
+            flex-wrap:
+                wrap;
+
+        }
+
+
+        .btn {
+
+            display:
+                inline-flex;
+
+            align-items:
+                center;
+
+            justify-content:
+                center;
+
+            padding:
+                12px 25px;
+
+            border-radius:
+                30px;
+
+            font-weight:
+                bold;
+
+            border:
+                none;
+
+            cursor:
+                pointer;
+
+            transition:
+                0.3s;
+
+        }
+
+
+        .btn-gold {
+
+            color:
+                #15382c;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    var(--gold),
+                    var(--light-gold)
+                );
+
+        }
+
+
+        .btn-white {
+
+            color:
+                var(--dark-green);
+
+            background:
+                white;
+
+        }
+
+
+        .btn:hover {
+
+            transform:
+                translateY(-4px);
+
+            box-shadow:
+                0 10px 25px rgba(0,0,0,0.22);
+
+        }
+
+
+        /* =====================================================
+           HERO QURAN CARD
+        ===================================================== */
+
+        .quran-card {
+
+            position:
+                relative;
+
+            padding:
+                45px 30px;
+
+            border-radius:
+                35px;
+
+            text-align:
+                center;
+
+            background:
+                rgba(255,255,255,0.10);
+
+            border:
+                1px solid rgba(255,255,255,0.30);
+
+            backdrop-filter:
+                blur(18px);
+
+            box-shadow:
+                0 25px 70px rgba(0,0,0,0.25);
+
+        }
+
+
+        .quran-card::before {
+
+            content:
+                "✦";
+
+            position:
+                absolute;
+
+            top:
+                15px;
+
+            right:
+                25px;
+
+            color:
+                var(--light-gold);
+
+            font-size:
+                25px;
+
+        }
+
+
+        .quran-card::after {
+
+            content:
+                "✦";
+
+            position:
+                absolute;
+
+            bottom:
+                15px;
+
+            left:
+                25px;
+
+            color:
+                var(--light-gold);
+
+            font-size:
+                25px;
+
+        }
+
+
+        .quran-symbol {
+
+            font-family:
+                serif;
+
+            font-size:
+                105px;
+
+            color:
+                var(--light-gold);
+
+            line-height:
+                1;
+
+        }
+
+
+        .quran-card h2 {
+
+            font-family:
+                "Times New Roman",
+                serif;
+
+            font-size:
+                38px;
+
+            color:
+                white;
+
+            margin:
+                18px 0 8px;
+
+        }
+
+
+        .quran-card .verse {
+
+            font-family:
+                "Times New Roman",
+                serif;
+
+            font-size:
+                29px;
+
+            color:
+                var(--light-gold);
+
+        }
+
+
+        .quran-card p {
+
+            margin-top:
+                12px;
+
+            color:
+                #e9fff6;
+
+        }
+
+
+        /* =====================================================
+           BACKGROUND AYAT STRIP
+        ===================================================== */
+
+        .ayah-strip {
+
+            background:
+                #fffdf5;
+
+            border-bottom:
+                1px solid #eadba7;
+
+            overflow:
+                hidden;
+
+            white-space:
+                nowrap;
+
+        }
+
+
+        .ayah-track {
+
+            display:
+                inline-block;
+
+            padding:
+                16px 0;
+
+            animation:
+                moveAyah 35s linear infinite;
+
+        }
+
+
+        .ayah-track span {
+
+            font-family:
+                "Times New Roman",
+                serif;
+
+            color:
+                #9b761b;
+
+            font-size:
+                22px;
+
+            margin:
+                0 50px;
+
+        }
+
+
+        @keyframes moveAyah {
+
+            from {
+                transform: translateX(0);
+            }
+
+            to {
+                transform: translateX(-50%);
+            }
+
+        }
+
+
+        /* =====================================================
+           SECTIONS
+        ===================================================== */
+
+        section {
+
+            padding:
+                85px 20px;
+
+        }
+
+
+        .container {
+
+            max-width:
+                1200px;
+
+            margin:
+                auto;
+
+        }
+
+
+        .section-title {
+
+            text-align:
+                center;
+
+            margin-bottom:
+                50px;
+
+        }
+
+
+        .section-title .arabic {
+
+            font-family:
+                "Times New Roman",
+                serif;
+
+            color:
+                var(--green);
+
+            font-size:
+                30px;
+
+        }
+
+
+        .section-title h2 {
+
+            color:
+                var(--dark-green);
+
+            font-family:
+                Georgia,
+                serif;
+
+            font-size:
+                40px;
+
+            margin:
+                3px 0;
+
+        }
+
+
+        .section-title p {
+
+            color:
+                #667d74;
+
+        }
+
+
+        /* =====================================================
+           FEATURES
+        ===================================================== */
+
+        .features {
+
+            margin-top:
+                -40px;
+
+            position:
+                relative;
+
+            z-index:
+                10;
+
+        }
+
+
+        .feature-grid {
+
+            display:
+                grid;
+
+            grid-template-columns:
+                repeat(4,1fr);
+
+            gap:
+                20px;
+
+        }
+
+
+        .feature {
+
+            background:
+                rgba(255,255,255,0.96);
+
+            padding:
+                25px 15px;
+
+            text-align:
+                center;
+
+            border-radius:
+                22px;
+
+            border:
+                1px solid rgba(212,175,55,0.18);
+
+            box-shadow:
+                var(--shadow);
+
+            transition:
+                0.3s;
+
+        }
+
+
+        .feature:hover {
+
+            transform:
+                translateY(-8px);
+
+            border-color:
+                var(--gold);
+
+        }
+
+
+        .feature-icon {
+
+            font-size:
+                42px;
+
+            margin-bottom:
+                8px;
+
+        }
+
+
+        .feature h3 {
+
+            color:
+                var(--deep-green);
+
+        }
+
+
+        /* =====================================================
+           ABOUT
+        ===================================================== */
+
+        .about {
+
+            background:
+                var(--cream);
+
+        }
+
+
+        .about-grid {
+
+            display:
+                grid;
+
+            grid-template-columns:
+                1fr 1fr;
+
+            gap:
+                40px;
+
+            align-items:
+                center;
+
+        }
+
+
+        .about-box {
+
+            background:
+                white;
+
+            padding:
+                35px;
+
+            border-radius:
+                25px;
+
+            box-shadow:
+                var(--shadow);
+
+            border-top:
+                4px solid var(--gold);
+
+        }
+
+
+        .about-box h3 {
+
+            color:
+                var(--dark-green);
+
+            font-size:
+                28px;
+
+            margin-bottom:
+                15px;
+
+        }
+
+
+        .about-list {
+
+            list-style:
+                none;
+
+            margin-top:
+                18px;
+
+        }
+
+
+        .about-list li {
+
+            padding:
+                9px 0;
+
+            border-bottom:
+                1px solid #e6eee9;
+
+        }
+
+
+        /* =====================================================
+           COURSES
+        ===================================================== */
+
+        .courses {
+
+            background:
+                #f1faf6;
+
+        }
+
+
+        .course-grid {
+
+            display:
+                grid;
+
+            grid-template-columns:
+                repeat(3,1fr);
+
+            gap:
+                25px;
+
+        }
+
+
+        .course-card {
+
+            background:
+                white;
+
+            border-radius:
+                25px;
+
+            overflow:
+                hidden;
+
+            box-shadow:
+                var(--shadow);
+
+            transition:
+                0.35s;
+
+            border:
+                1px solid #deece6;
+
+        }
+
+
+        .course-card:hover {
+
+            transform:
+                translateY(-10px);
+
+            box-shadow:
+                0 20px 45px rgba(0,0,0,0.14);
+
+        }
+
+
+        .course-top {
+
+            padding:
+                30px;
+
+            text-align:
+                center;
+
+            color:
+                white;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    var(--dark-green),
+                    var(--green)
+                );
+
+        }
+
+
+        .course-top .icon {
+
+            font-size:
+                48px;
+
+        }
+
+
+        .course-top h3 {
+
+            font-size:
+                23px;
+
+        }
+
+
+        .course-body {
+
+            padding:
+                25px;
+
+        }
+
+
+        .course-body h4 {
+
+            color:
+                #a77c14;
+
+            margin-bottom:
+                8px;
+
+        }
+
+
+        .course-body ul {
+
+            padding-right:
+                20px;
+
+            margin-bottom:
+                20px;
+
+            color:
+                #5f716a;
+
+        }
+
+
+        .details-btn {
+
+            width:
+                100%;
+
+            padding:
+                11px;
+
+            border:
+                none;
+
+            border-radius:
+                12px;
+
+            color:
+                white;
+
+            background:
+                var(--dark-green);
+
+            cursor:
+                pointer;
+
+            font-weight:
+                bold;
+
+            transition:
+                0.3s;
+
+        }
+
+
+        .details-btn:hover {
+
+            background:
+                var(--green);
+
+        }
+
+
+        /* =====================================================
+           TEACHER
+        ===================================================== */
+
+        .teacher {
+
+            position:
+                relative;
+
+            overflow:
+                hidden;
+
+            background:
+
+                radial-gradient(
+                    circle at 20% 30%,
+                    rgba(212,175,55,0.12),
+                    transparent 30%
+                ),
+
+                linear-gradient(
+                    135deg,
+                    #032d22,
+                    #075e46
+                );
+
+            color:
+                white;
+
+        }
+
+
+        .teacher::before {
+
+            content:
+                "حَافِظ";
+
+            position:
+                absolute;
+
+            font-family:
+                "Times New Roman",
+                serif;
+
+            font-size:
+                190px;
+
+            color:
+                rgba(255,255,255,0.025);
+
+            left:
+                2%;
+
+            bottom:
+                0;
+
+        }
+
+
+        .teacher-box {
+
+            max-width:
+                950px;
+
+            margin:
+                auto;
+
+            padding:
+                45px;
+
+            display:
+                grid;
+
+            grid-template-columns:
+                190px 1fr;
+
+            gap:
+                40px;
+
+            align-items:
+                center;
+
+            background:
+                rgba(255,255,255,0.09);
+
+            border:
+                1px solid rgba(255,255,255,0.25);
+
+            border-radius:
+                30px;
+
+            backdrop-filter:
+                blur(12px);
+
+        }
+
+
+        .teacher-photo {
+
+            width:
+                175px;
+
+            height:
+                175px;
+
+            border-radius:
+                50%;
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            justify-content:
+                center;
+
+            font-size:
+                70px;
+
+            color:
+                var(--dark-green);
+
+            background:
+                linear-gradient(
+                    135deg,
+                    var(--gold),
+                    var(--light-gold)
+                );
+
+            border:
+                6px solid rgba(255,255,255,0.5);
+
+            box-shadow:
+                0 15px 35px rgba(0,0,0,0.25);
+
+        }
+
+
+        .teacher-info h2 {
+
+            font-family:
+                Georgia,
+                serif;
+
+            font-size:
+                35px;
+
+            color:
+                var(--light-gold);
+
+        }
+
+
+        .teacher-info .english-name {
+
+            font-size:
+                26px;
+
+            color:
+                white;
+
+            margin:
+                2px 0 12px;
+
+        }
+
+
+        .teacher-info .arabic-name {
+
+            font-family:
+                "Times New Roman",
+                serif;
+
+            font-size:
+                28px;
+
+            color:
+                var(--light-gold);
+
+        }
+
+
+        .teacher-badge {
+
+            display:
+                inline-block;
+
+            margin-top:
+                15px;
+
+            padding:
+                6px 17px;
+
+            border:
+                1px solid rgba(244,215,123,0.5);
+
+            border-radius:
+                20px;
+
+            color:
+                #fff5c2;
+
+        }
+
+
+        /* =====================================================
+           PROCESS
+        ===================================================== */
+
+        .process {
+
+            background:
+                white;
+
+        }
+
+
+        .process-grid {
+
+            display:
+                grid;
+
+            grid-template-columns:
+                repeat(4,1fr);
+
+            gap:
+                20px;
+
+        }
+
+
+        .step {
+
+            text-align:
+                center;
+
+            padding:
+                30px 15px;
+
+            border:
+                1px solid #deece6;
+
+            border-radius:
+                22px;
+
+            background:
+                #fbfffd;
+
+        }
+
+
+        .step-number {
+
+            width:
+                58px;
+
+            height:
+                58px;
+
+            margin:
+                auto;
+
+            border-radius:
+                50%;
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            justify-content:
+                center;
+
+            background:
+                var(--dark-green);
+
+            color:
+                white;
+
+            font-size:
+                22px;
+
+            font-weight:
+                bold;
+
+            border:
+                3px solid var(--gold);
+
+        }
+
+
+        .step h3 {
+
+            color:
+                var(--dark-green);
+
+            margin-top:
+                14px;
+
+        }
+
+
+        /* =====================================================
+           WHY
+        ===================================================== */
+
+        .why {
+
+            background:
+                var(--cream);
+
+        }
+
+
+        .why-grid {
+
+            display:
+                grid;
+
+            grid-template-columns:
+                repeat(2,1fr);
+
+            gap:
+                20px;
+
+        }
+
+
+        .why-item {
+
+            background:
+                white;
+
+            padding:
+                25px;
+
+            border-radius:
+                20px;
+
+            border-right:
+                4px solid var(--gold);
+
+            box-shadow:
+                0 7px 25px rgba(0,0,0,0.05);
+
+        }
+
+
+        .why-item strong {
+
+            display:
+                block;
+
+            color:
+                var(--dark-green);
+
+            font-size:
+                19px;
+
+            margin-bottom:
+                5px;
+
+        }
+
+
+        /* =====================================================
+           QUOTE
+        ===================================================== */
+
+        .quote {
+
+            position:
+                relative;
+
+            overflow:
+                hidden;
+
+            text-align:
+                center;
+
+            color:
+                white;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #032d22,
+                    #087f5b
+                );
+
+        }
+
+
+        .quote::before {
+
+            content:
+                "❁";
+
+            position:
+                absolute;
+
+            font-size:
+                260px;
+
+            color:
+                rgba(255,255,255,0.025);
+
+            top:
+                -80px;
+
+            left:
+                5%;
+
+        }
+
+
+        .quote-text {
+
+            max-width:
+                950px;
+
+            margin:
+                auto;
+
+            font-family:
+                "Times New Roman",
+                serif;
+
+            font-size:
+                36px;
+
+            color:
+                var(--light-gold);
+
+        }
+
+
+        .quote-english {
+
+            margin-top:
+                15px;
+
+            color:
+                #e4fff6;
+
+        }
+
+
+        /* =====================================================
+           ADMISSION
+        ===================================================== */
+
+        .admission {
+
+            background:
+                #f2faf7;
+
+        }
+
+
+        .admission-box {
+
+            max-width:
+                950px;
+
+            margin:
+                auto;
+
+            background:
+                white;
+
+            padding:
+                35px;
+
+            border-radius:
+                25px;
+
+            box-shadow:
+                var(--shadow);
+
+        }
+
+
+        .form-grid {
+
+            display:
+                grid;
+
+            grid-template-columns:
+                1fr 1fr;
+
+            gap:
+                18px;
+
+        }
+
+
+        .form-group {
+
+            display:
+                flex;
+
+            flex-direction:
+                column;
+
+        }
+
+
+        .form-group.full {
+
+            grid-column:
+                1 / -1;
+
+        }
+
+
+        .form-group label {
+
+            margin-bottom:
+                6px;
+
+            font-weight:
+                bold;
+
+            color:
+                var(--dark-green);
+
+        }
+
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+
+            padding:
+                12px 15px;
+
+            border:
+                1px solid #cfe2d9;
+
+            border-radius:
+                12px;
+
+            outline:
+                none;
+
+        }
+
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+
+            border-color:
+                var(--green);
+
+        }
+
+
+        /* =====================================================
+           CONTACT
+        ===================================================== */
+
+        .contact {
+
+            background:
+                white;
+
+        }
+
+
+        .contact-grid {
+
+            display:
+                grid;
+
+            grid-template-columns:
+                repeat(3,1fr);
+
+            gap:
+                25px;
+
+        }
+
+
+        .contact-card {
+
+            text-align:
+                center;
+
+            padding:
+                30px;
+
+            border-radius:
+                22px;
+
+            background:
+                #f3faf7;
+
+            border:
+                1px solid #dcece5;
+
+        }
+
+
+        .contact-card .big-icon {
+
+            font-size:
+                45px;
+
+        }
+
+
+        .contact-card h3 {
+
+            color:
+                var(--dark-green);
+
+            margin:
+                8px 0;
+
+        }
+
+
+        .whatsapp {
+
+            display:
+                inline-block;
+
+            margin-top:
+                12px;
+
+            padding:
+                10px 20px;
+
+            border-radius:
+                25px;
+
+            color:
+                white;
+
+            background:
+                #128c7e;
+
+        }
+
+
+        /* =====================================================
+           FOOTER
+        ===================================================== */
+
+        footer {
+
+            background:
+                #021f18;
+
+            color:
+                #d8eee6;
+
+            padding:
+                55px 20px 20px;
+
+        }
+
+
+        .footer-grid {
+
+            max-width:
+                1200px;
+
+            margin:
+                auto;
+
+            display:
+                grid;
+
+            grid-template-columns:
+                2fr 1fr 1fr;
+
+            gap:
+                40px;
+
+        }
+
+
+        footer h3 {
+
+            color:
+                var(--light-gold);
+
+            margin-bottom:
+                14px;
+
+        }
+
+
+        footer a {
+
+            display:
+                block;
+
+            color:
+                #d8eee6;
+
+            margin:
+                5px 0;
+
+        }
+
+
+        footer a:hover {
+
+            color:
+                var(--light-gold);
+
+        }
+
+
+        .copyright {
+
+            max-width:
+                1200px;
+
+            margin:
+                35px auto 0;
+
+            padding-top:
+                20px;
+
+            text-align:
+                center;
+
+            border-top:
+                1px solid rgba(255,255,255,0.12);
+
+        }
+
+
+        /* =====================================================
+           MODAL
+        ===================================================== */
+
+        .modal {
+
+            display:
+                none;
+
+            position:
+                fixed;
+
+            inset:
+                0;
+
+            z-index:
+                3000;
+
+            background:
+                rgba(0,0,0,0.78);
+
+            padding:
+                20px;
+
+            align-items:
+                center;
+
+            justify-content:
+                center;
+
+        }
+
+
+        .modal-content {
+
+            width:
+                min(720px,100%);
+
+            max-height:
+                90vh;
+
+            overflow-y:
+                auto;
+
+            padding:
+                38px;
+
+            background:
+                white;
+
+            border-radius:
+                25px;
+
+            position:
+                relative;
+
+            animation:
+                popup 0.3s ease;
+
+        }
+
+
+        @keyframes popup {
+
+            from {
+                opacity: 0;
+                transform: scale(0.8);
+            }
+
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+
+        }
+
+
+        .close {
+
+            position:
+                absolute;
+
+            top:
+                10px;
+
+            left:
+                20px;
+
+            font-size:
+                32px;
+
+            cursor:
+                pointer;
+
+            color:
+                #555;
+
+        }
+
+
+        .modal-content h2 {
+
+            color:
+                var(--dark-green);
+
+            margin-bottom:
+                8px;
+
+        }
+
+
+        .modal-content h3 {
+
+            color:
+                #a77c14;
+
+            margin-top:
+                18px;
+
+        }
+
+
+        .modal-content ul {
+
+            padding-right:
+                25px;
+
+        }
+
+
+        /* =====================================================
+           FLOATING BUTTON
+        ===================================================== */
+
+        .floating-whatsapp {
+
+            position:
+                fixed;
+
+            bottom:
+                22px;
+
+            left:
+                22px;
+
+            z-index:
+                1500;
+
+            width:
+                60px;
+
+            height:
+                60px;
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            justify-content:
+                center;
+
+            border-radius:
+                50%;
+
+            background:
+                #25d366;
+
+            color:
+                white;
+
+            font-size:
+                28px;
+
+            box-shadow:
+                0 8px 30px rgba(0,0,0,0.25);
+
+            animation:
+                pulse 2s infinite;
+
+        }
+
+
+        @keyframes pulse {
+
+            0% {
+                box-shadow:
+                    0 0 0 0 rgba(37,211,102,0.5);
+            }
+
+            70% {
+                box-shadow:
+                    0 0 0 15px rgba(37,211,102,0);
+            }
+
+            100% {
+                box-shadow:
+                    0 0 0 0 rgba(37,211,102,0);
+            }
+
+        }
+
+
+        /* =====================================================
+           RESPONSIVE
+        ===================================================== */
+
+        @media(max-width: 950px) {
+
+            nav {
+                display:
+                    none;
+            }
+
+            .hero-container {
+
+                grid-template-columns:
+                    1fr;
+
+                text-align:
+                    center;
+
+            }
+
+            .hero-content {
+                text-align:
+                    center;
+            }
+
+            .hero-buttons {
+                justify-content:
+                    center;
+            }
+
+            .feature-grid {
+                grid-template-columns:
+                    repeat(2,1fr);
+            }
+
+            .course-grid {
+                grid-template-columns:
+                    repeat(2,1fr);
+            }
+
+            .process-grid {
+                grid-template-columns:
+                    repeat(2,1fr);
+            }
+
+            .teacher-box {
+                grid-template-columns:
+                    1fr;
+
+                text-align:
+                    center;
+
+                justify-items:
+                    center;
+            }
+
+            .footer-grid {
+                grid-template-columns:
+                    1fr 1fr;
+            }
+
+        }
+
+
+        @media(max-width: 650px) {
+
+            .navbar {
+                padding:
+                    10px 15px;
+            }
+
+            .logo-text h1 {
+                font-size:
+                    17px;
+            }
+
+            .logo-text .arabic {
+                font-size:
+                    12px;
+            }
+
+            .logo-icon {
+                width:
+                    48px;
+
+                height:
+                    48px;
+
+                font-size:
+                    23px;
+            }
+
+            .hero {
+                min-height:
+                    760px;
+            }
+
+            .hero-container {
+                min-height:
+                    760px;
+
+                padding:
+                    70px 18px;
+            }
+
+            .hero-title {
+                font-size:
+                    48px;
+            }
+
+            .hero-arabic {
+                font-size:
+                    30px;
+            }
+
+            .hero-subtitle {
+                font-size:
+                    21px;
+            }
+
+            .bismillah {
+                font-size:
+                    24px;
+            }
+
+            .feature-grid,
+            .course-grid,
+            .process-grid,
+            .why-grid,
+            .contact-grid,
+            .footer-grid,
+            .about-grid {
+
+                grid-template-columns:
+                    1fr;
+
+            }
+
+            .form-grid {
+                grid-template-columns:
+                    1fr;
+            }
+
+            .form-group.full {
+                grid-column:
+                    auto;
+            }
+
+            .teacher-box {
+                padding:
+                    30px 20px;
+            }
+
+            .quote-text {
+                font-size:
+                    28px;
+            }
+
+            section {
+                padding:
+                    65px 15px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     ISLAMIC BACKGROUND
+===================================================== -->
+
+<div class="islamic-background">
+
+    <div class="floating-ayah ayah-1">
+        وَرَتِّلِ الْقُرْآنَ تَرْتِيلًا
+    </div>
+
+    <div class="floating-ayah ayah-2">
+        هُدًى لِّلْمُتَّقِينَ
+    </div>
+
+    <div class="floating-ayah ayah-3">
+        إِنَّ هَٰذَا الْقُرْآنَ يَهْدِي لِلَّتِي هِيَ أَقْوَمُ
+    </div>
+
+    <div class="floating-ayah ayah-4">
+        وَقُلْ رَبِّ زِدْنِي عِلْمًا
+    </div>
+
+</div>
+
+
+
+<!-- =====================================================
+     HEADER
+===================================================== -->
+
+<header>
+
+    <div class="navbar">
+
+
+        <a href="#home" class="logo">
+
+            <div class="logo-icon">
+                ۞
+            </div>
+
+            <div class="logo-text">
+
+                <h1>
+                    Noor-ul-Huda Quran Academy
+                </h1>
+
+                <span class="arabic">
+                    أكاديمية نور الهدى للقرآن الكريم
+                </span>
+
+            </div>
+
+        </a>
+
+
+        <nav>
+
+            <a href="#home">
+                Home
+            </a>
+
+            <a href="#about">
+                About
+            </a>
+
+            <a href="#courses">
+                Courses
+            </a>
+
+            <a href="#teacher">
+                Teacher
+            </a>
+
+            <a href="#process">
+                Process
+            </a>
+
+            <a href="#admission">
+                Admission
+            </a>
+
+            <a href="#contact" class="nav-contact">
+                Contact
+            </a>
+
+        </nav>
+
+
+    </div>
+
+</header>
+
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<section class="hero" id="home">
+
+    <div class="hero-pattern"></div>
+
+
+    <div class="hero-container">
+
+
+        <div class="hero-content">
+
+
+            <div class="bismillah">
+
+                بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّحِيْمِ
+
+            </div>
+
+
+            <div class="academy-small">
+
+                ✦ ONLINE QURAN EDUCATION ✦
+
+            </div>
+
+
+            <h1 class="hero-title">
+
+                Noor-ul-Huda
+
+            </h1>
+
+
+            <div class="hero-arabic">
+
+                أكاديمية نور الهدى للقرآن الكريم
+
+            </div>
+
+
+            <div class="hero-subtitle">
+
+                Quran Academy
+
+            </div>
+
+
+            <p class="hero-description">
+
+                Learn the Holy Quran online with correct
+                pronunciation, Tajweed, Nazra, Hifz,
+                Quran Translation and basic Islamic education.
+
+                <br><br>
+
+                قرآنِ کریم کو صحیح تلفظ اور تجوید کے ساتھ
+                گھر بیٹھے سیکھیں۔
+
+            </p>
+
+
+            <div class="hero-buttons">
+
+                <a href="#courses" class="btn btn-gold">
+
+                    📖 Explore Courses
+
+                </a>
+
+
+                <a href="#admission" class="btn btn-white">
+
+                    📝 Enroll Now
+
+                </a>
+
+            </div>
+
+
+        </div>
+
+
+
+        <div class="quran-card">
+
+
+            <div class="quran-symbol">
+
+                ۞
+
+            </div>
+
+
+            <h2>
+
+                القرآن الكريم
+
+            </h2>
+
+
+            <div class="verse">
+
+                هُدًى لِّلْمُتَّقِينَ
+
+            </div>
+
+
+            <p>
+
+                A source of guidance, knowledge and light.
+
+            </p>
+
+
+            <p>
+
+                قرآنِ کریم — ہدایت اور روشنی
+
+            </p>
+
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     MOVING AYAH STRIP
+===================================================== -->
+
+<div class="ayah-strip">
+
+    <div class="ayah-track">
+
+        <span>
+            وَرَتِّلِ الْقُرْآنَ تَرْتِيلًا
+        </span>
+
+        <span>
+            وَقُلْ رَبِّ زِدْنِي عِلْمًا
+        </span>
+
+        <span>
+            إِنَّ هَٰذَا الْقُرْآنَ يَهْدِي لِلَّتِي هِيَ أَقْوَمُ
+        </span>
+
+        <span>
+            خَيْرُكُمْ مَنْ تَعَلَّمَ الْقُرْآنَ وَعَلَّمَهُ
+        </span>
+
+        <span>
+            وَرَتِّلِ الْقُرْآنَ تَرْتِيلًا
+        </span>
+
+        <span>
+            وَقُلْ رَبِّ زِدْنِي عِلْمًا
+        </span>
+
+    </div>
+
+</div>
+
+
+
+<!-- =====================================================
+     FEATURES
+===================================================== -->
+
+<section class="features">
+
+    <div class="container">
+
+        <div class="feature-grid">
+
+
+            <div class="feature">
+
+                <div class="feature-icon">
+                    📖
+                </div>
+
+                <h3>
+                    Online Quran
+                </h3>
+
+                <p>
+                    Learn from home
+                </p>
+
+            </div>
+
+
+            <div class="feature">
+
+                <div class="feature-icon">
+                    🎧
+                </div>
+
+                <h3>
+                    One-to-One
+                </h3>
+
+                <p>
+                    Personal attention
+                </p>
+
+            </div>
+
+
+            <div class="feature">
+
+                <div class="feature-icon">
+                    🌍
+                </div>
+
+                <h3>
+                    Worldwide
+                </h3>
+
+                <p>
+                    Students from everywhere
+                </p>
+
+            </div>
+
+
+            <div class="feature">
+
+                <div class="feature-icon">
+                    🕋
+                </div>
+
+                <h3>
+                    Islamic Studies
+                </h3>
+
+                <p>
+                    Quran & Islamic learning
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     ABOUT
+===================================================== -->
+
+<section class="about" id="about">
+
+    <div class="container">
+
+
+        <div class="section-title">
+
+            <div class="arabic">
+                من نحن؟
+            </div>
+
+            <h2>
+                About Our Academy
+            </h2>
+
+            <p>
+                Noor-ul-Huda Quran Academy
+            </p>
+
+        </div>
+
+
+
+        <div class="about-grid">
+
+
+            <div class="about-box">
+
+                <h3>
+                    Noor-ul-Huda Quran Academy
+                </h3>
+
+                <p>
+
+                    Noor-ul-Huda is an online Quran education
+                    platform designed to help students learn
+                    the Holy Quran from the comfort of their homes.
+
+                </p>
+
+                <ul class="about-list">
+
+                    <li>
+                        ✓ Quran Reading — ناظرہ قرآن
+                    </li>
+
+                    <li>
+                        ✓ Quran with Tajweed — تجوید القرآن
+                    </li>
+
+                    <li>
+                        ✓ Hifz-ul-Quran — حفظ القرآن
+                    </li>
+
+                    <li>
+                        ✓ Quran Translation — ترجمہ قرآن
+                    </li>
+
+                    <li>
+                        ✓ Quran for Kids — بچوں کے لیے قرآن
+                    </li>
+
+                    <li>
+                        ✓ Basic Islamic Studies — اسلامی تعلیمات
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+
+            <div class="about-box">
+
+                <h3>
+                    Our Mission
+                </h3>
+
+                <p>
+
+                    Our mission is to make Quranic education
+                    accessible, simple and meaningful for
+                    students of different ages and backgrounds.
+
+                </p>
+
+                <br>
+
+                <p style="
+                    font-family:'Times New Roman',serif;
+                    font-size:29px;
+                    color:#087f5b;
+                ">
+
+                    وَرَتِّلِ الْقُرْآنَ تَرْتِيلًا
+
+                </p>
+
+                <p>
+
+                    Learn to recite the Quran carefully
+                    and correctly.
+
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     COURSES
+===================================================== -->
+
+<section class="courses" id="courses">
+
+    <div class="container">
+
+
+        <div class="section-title">
+
+            <div class="arabic">
+                دورات القرآن الكريم
+            </div>
+
+            <h2>
+                Quran Courses
+            </h2>
+
+            <p>
+                Choose a course according to your learning needs
+            </p>
+
+        </div>
+
+
+
+        <div class="course-grid">
+
+
+            <!-- NAZRA -->
+
+            <div class="course-card">
+
+                <div class="course-top">
+
+                    <div class="icon">
+                        📖
+                    </div>
+
+                    <h3>
+                        Nazra Quran
+                    </h3>
+
+                    <p>
+                        ناظرہ قرآن
+                    </p>
+
+                </div>
+
+
+                <div class="course-body">
+
+                    <h4>
+                        Quran Reading
+                    </h4>
+
+                    <ul>
+
+                        <li>
+                            Arabic letters
+                        </li>
+
+                        <li>
+                            Correct pronunciation
+                        </li>
+
+                        <li>
+                            Quran reading practice
+                        </li>
+
+                        <li>
+                            Daily lesson
+                        </li>
+
+                    </ul>
+
+
+                    <button
+                        class="details-btn"
+                        onclick="openCourse('nazra')">
+
+                        View Details
+
+                    </button>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- TAJWEED -->
+
+            <div class="course-card">
+
+                <div class="course-top">
+
+                    <div class="icon">
+                        🎙️
+                    </div>
+
+                    <h3>
+                        Quran with Tajweed
+                    </h3>
+
+                    <p>
+                        تجوید القرآن
+                    </p>
+
+                </div>
+
+
+                <div class="course-body">
+
+                    <h4>
+                        Correct Recitation
+                    </h4>
+
+                    <ul>
+
+                        <li>
+                            Makharij
+                        </li>
+
+                        <li>
+                            Sifaat
+                        </li>
+
+                        <li>
+                            Madd
+                        </li>
+
+                        <li>
+                            Basic Tajweed Rules
+                        </li>
+
+                    </ul>
+
+
+                    <button
+                        class="details-btn"
+                        onclick="openCourse('tajweed')">
+
+                        View Details
+
+                    </button>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- HIFZ -->
+
+            <div class="course-card">
+
+                <div class="course-top">
+
+                    <div class="icon">
+                        🕌
+                    </div>
+
+                    <h3>
+                        Hifz-ul-Quran
+                    </h3>
+
+                    <p>
+                        حفظ القرآن
+                    </p>
+
+                </div>
+
+
+                <div class="course-body">
+
+                    <h4>
+                        Quran Memorization
+                    </h4>
+
+                    <ul>
+
+                        <li>
+                            Daily new lesson
+                        </li>
+
+                        <li>
+                            Sabqi
+                        </li>
+
+                        <li>
+                            Manzil
+                        </li>
+
+                        <li>
+                            Revision
+                        </li>
+
+                    </ul>
+
+
+                    <button
+                        class="details-btn"
+                        onclick="openCourse('hifz')">
+
+                        View Details
+
+                    </button>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- TRANSLATION -->
+
+            <div class="course-card">
+
+                <div class="course-top">
+
+                    <div class="icon">
+                        🌙
+                    </div>
+
+                    <h3>
+                        Quran Translation
+                    </h3>
+
+                    <p>
+                        ترجمہ قرآن
+                    </p>
+
+                </div>
+
+
+                <div class="course-body">
+
+                    <h4>
+                        Understand the Quran
+                    </h4>
+
+                    <ul>
+
+                        <li>
+                            Word meanings
+                        </li>
+
+                        <li>
+                            Easy translation
+                        </li>
+
+                        <li>
+                            Basic explanation
+                        </li>
+
+                        <li>
+                            Lesson summary
+                        </li>
+
+                    </ul>
+
+
+                    <button
+                        class="details-btn"
+                        onclick="openCourse('translation')">
+
+                        View Details
+
+                    </button>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- KIDS -->
+
+            <div class="course-card">
+
+                <div class="course-top">
+
+                    <div class="icon">
+                        👦
+                    </div>
+
+                    <h3>
+                        Quran for Kids
+                    </h3>
+
+                    <p>
+                        بچوں کا قرآن کورس
+                    </p>
+
+                </div>
+
+
+                <div class="course-body">
+
+                    <h4>
+                        Easy Quran Learning
+                    </h4>
+
+                    <ul>
+
+                        <li>
+                            Noorani Qaida
+                        </li>
+
+                        <li>
+                            Nazra
+                        </li>
+
+                        <li>
+                            Short Surahs
+                        </li>
+
+                        <li>
+                            Daily Duas
+                        </li>
+
+                    </ul>
+
+
+                    <button
+                        class="details-btn"
+                        onclick="openCourse('kids')">
+
+                        View Details
+
+                    </button>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- ISLAMIC -->
+
+            <div class="course-card">
+
+                <div class="course-top">
+
+                    <div class="icon">
+                        🤲
+                    </div>
+
+                    <h3>
+                        Islamic Studies
+                    </h3>
+
+                    <p>
+                        اسلامی تعلیمات
+                    </p>
+
+                </div>
+
+
+                <div class="course-body">
+
+                    <h4>
+                        Basic Islamic Education
+                    </h4>
+
+                    <ul>
+
+                        <li>
+                            Kalimas
+                        </li>
+
+                        <li>
+                            Salah
+                        </li>
+
+                        <li>
+                            Wudu
+                        </li>
+
+                        <li>
+                            Islamic manners
+                        </li>
+
+                    </ul>
+
+
+                    <button
+                        class="details-btn"
+                        onclick="openCourse('islamic')">
+
+                        View Details
+
+                    </button>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     TEACHER
+===================================================== -->
+
+<section class="teacher" id="teacher">
+
+    <div class="container">
+
+
+        <div class="section-title">
+
+            <div class="arabic" style="color:#f6df8b;">
+                مُعَلِّمُ الْقُرْآنِ
+            </div>
+
+            <h2 style="color:white;">
+                Quran Teacher
+            </h2>
+
+            <p style="color:#dffef3;">
+                قرآنِ کریم کے استاد
+            </p>
+
+        </div>
+
+
+
+        <div class="teacher-box">
+
+
+            <div class="teacher-photo">
+
+                👨‍🏫
+
+            </div>
+
+
+
+            <div class="teacher-info">
+
+
+                <h2>
+
+                    Hafiz Muhammad Shameer
+
+                </h2>
+
+
+                <div class="english-name">
+
+                    Quran Teacher & Islamic Education Instructor
+
+                </div>
+
+
+                <div class="arabic-name">
+
+                    حافظ محمد شمیر
+
+                </div>
+
+
+                <p style="margin-top:15px;">
+
+                    قرآنِ کریم کی ناظرہ، تجوید، حفظ اور
+                    بنیادی اسلامی تعلیمات کے لیے آن لائن
+                    تعلیمی رہنمائی۔
+
+                </p>
+
+
+                <p style="margin-top:10px;">
+
+                    Online Quran learning with a focus on
+                    correct recitation, Tajweed and
+                    Islamic education.
+
+                </p>
+
+
+                <div class="teacher-badge">
+
+                    حَافِظُ الْقُرْآنِ • QURAN TEACHER
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     PROCESS
+===================================================== -->
+
+<section class="process" id="process">
+
+    <div class="container">
+
+
+        <div class="section-title">
+
+            <div class="arabic">
+                طريقة التعليم
+            </div>
+
+            <h2>
+                How Online Classes Work
+            </h2>
+
+            <p>
+                آسان اور سادہ طریقہ
+            </p>
+
+        </div>
+
+
+
+        <div class="process-grid">
+
+
+            <div class="step">
+
+                <div class="step-number">
+                    1
+                </div>
+
+                <h3>
+                    Contact
+                </h3>
+
+                <p>
+                    Contact us through WhatsApp.
+                </p>
+
+            </div>
+
+
+            <div class="step">
+
+                <div class="step-number">
+                    2
+                </div>
+
+                <h3>
+                    Select Course
+                </h3>
+
+                <p>
+                    Choose your Quran course.
+                </p>
+
+            </div>
+
+
+            <div class="step">
+
+                <div class="step-number">
+                    3
+                </div>
+
+                <h3>
+                    Choose Time
+                </h3>
+
+                <p>
+                    Select a suitable class time.
+                </p>
+
+            </div>
+
+
+            <div class="step">
+
+                <div class="step-number">
+                    4
+                </div>
+
+                <h3>
+                    Start Learning
+                </h3>
+
+                <p>
+                    Begin your online Quran classes.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     WHY US
+===================================================== -->
+
+<section class="why">
+
+    <div class="container">
+
+
+        <div class="section-title">
+
+            <div class="arabic">
+                لماذا نور الهدى؟
+            </div>
+
+            <h2>
+                About Our Learning
+            </h2>
+
+            <p>
+                Simple, focused and accessible Quran education
+            </p>
+
+        </div>
+
+
+
+        <div class="why-grid">
+
+
+            <div class="why-item">
+
+                <strong>
+                    📖 Quran Focused Learning
+                </strong>
+
+                <p>
+                    قرآنِ کریم کی درست قراءت اور بنیادی
+                    دینی تعلیم پر توجہ۔
+                </p>
+
+            </div>
+
+
+            <div class="why-item">
+
+                <strong>
+                    🎧 One-to-One Classes
+                </strong>
+
+                <p>
+                    Individual learning sessions for
+                    focused practice.
+                </p>
+
+            </div>
+
+
+            <div class="why-item">
+
+                <strong>
+                    👨‍👩‍👧 For Kids & Adults
+                </strong>
+
+                <p>
+                    بچوں اور بڑوں کے لیے مختلف تعلیمی
+                    ضروریات کے مطابق کلاسز۔
+                </p>
+
+            </div>
+
+
+            <div class="why-item">
+
+                <strong>
+                    🌍 Worldwide Online Learning
+                </strong>
+
+                <p>
+                    مختلف ممالک سے طلبہ آن لائن کلاسز
+                    میں شامل ہو سکتے ہیں۔
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     QURAN QUOTE
+===================================================== -->
+
+<section class="quote">
+
+    <div class="container">
+
+
+        <div class="quote-text">
+
+            وَقُلْ رَبِّ زِدْنِي عِلْمًا
+
+        </div>
+
+
+        <div class="quote-english">
+
+            “My Lord, increase me in knowledge.”
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     ADMISSION
+===================================================== -->
+
+<section class="admission" id="admission">
+
+    <div class="container">
+
+
+        <div class="section-title">
+
+            <div class="arabic">
+                التسجيل
+            </div>
+
+            <h2>
+                Online Admission
+            </h2>
+
+            <p>
+                Quran Academy Registration
+            </p>
+
+        </div>
+
+
+
+        <div class="admission-box">
+
+
+            <form onsubmit="submitAdmission(event)">
+
+
+                <div class="form-grid">
+
+
+                    <div class="form-group">
+
+                        <label>
+                            Student Name
+                        </label>
+
+                        <input
+                            type="text"
+                            id="studentName"
+                            placeholder="Your Name"
+                            required>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>
+                            Age
+                        </label>
+
+                        <input
+                            type="number"
+                            id="studentAge"
+                            placeholder="Age"
+                            required>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>
+                            Country
+                        </label>
+
+                        <input
+                            type="text"
+                            id="country"
+                            placeholder="Country"
+                            required>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>
+                            Select Course
+                        </label>
+
+                        <select id="course" required>
+
+                            <option value="">
+                                Select Course
+                            </option>
+
+                            <option>
+                                Nazra Quran
+                            </option>
+
+                            <option>
+                                Quran with Tajweed
+                            </option>
+
+                            <option>
+                                Hifz-ul-Quran
+                            </option>
+
+                            <option>
+                                Quran Translation
+                            </option>
+
+                            <option>
+                                Quran for Kids
+                            </option>
+
+                            <option>
+                                Islamic Studies
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>
+                            Preferred Time
+                        </label>
+
+                        <input
+                            type="text"
+                            id="time"
+                            placeholder="Example: 7:00 PM">
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>
+                            Contact Number
+                        </label>
+
+                        <input
+                            type="text"
+                            id="contactNumber"
+                            placeholder="WhatsApp Number">
+
+                    </div>
+
+
+                    <div class="form-group full">
+
+                        <label>
+                            Message
+                        </label>
+
+                        <textarea
+                            id="message"
+                            rows="4"
+                            placeholder="Write your message..."></textarea>
+
+                    </div>
+
+
+                    <div class="form-group full">
+
+                        <button
+                            type="submit"
+                            class="btn btn-gold">
+
+                            📝 Submit Admission Request
+
+                        </button>
+
+                    </div>
+
+
+                </div>
+
+            </form>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     CONTACT
+===================================================== -->
+
+<section class="contact" id="contact">
+
+    <div class="container">
+
+
+        <div class="section-title">
+
+            <div class="arabic">
+                تواصل معنا
+            </div>
+
+            <h2>
+                Contact Us
+            </h2>
+
+            <p>
+                Noor-ul-Huda Quran Academy
+            </p>
+
+        </div>
+
+
+
+        <div class="contact-grid">
+
+
+            <div class="contact-card">
+
+                <div class="big-icon">
+                    📱
+                </div>
+
+                <h3>
+                    WhatsApp
+                </h3>
+
+                <p>
+                    Online Quran Classes
+                </p>
+
+                <p dir="ltr">
+
+                    03-11-99-03-11-99-2-09-86
+
+                </p>
+
+
+                <a
+                    href="#"
+                    class="whatsapp"
+                    onclick="showNumberMessage()">
+
+                    WhatsApp
+
+                </a>
+
+            </div>
+
+
+
+            <div class="contact-card">
+
+                <div class="big-icon">
+                    👨‍🏫
+                </div>
+
+                <h3>
+                    Quran Teacher
+                </h3>
+
+                <p>
+                    Hafiz Muhammad Shameer
+                </p>
+
+                <p>
+                    حافظ محمد شمیر
+                </p>
+
+            </div>
+
+
+
+            <div class="contact-card">
+
+                <div class="big-icon">
+                    🌍
+                </div>
+
+                <h3>
+                    Online Academy
+                </h3>
+
+                <p>
+                    Worldwide Quran Learning
+                </p>
+
+                <p>
+                    القرآن الكريم
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer>
+
+    <div class="footer-grid">
+
+
+        <div>
+
+            <h3>
+                Noor-ul-Huda Quran Academy
+            </h3>
+
+            <p style="
+                font-family:'Times New Roman',serif;
+                font-size:22px;
+                color:#f6df8b;
+            ">
+
+                أكاديمية نور الهدى للقرآن الكريم
+
+            </p>
+
+            <p style="margin-top:10px;">
+
+                Online Quran education including
+                Nazra, Tajweed, Hifz, Quran Translation
+                and Islamic Studies.
+
+            </p>
+
+        </div>
+
+
+        <div>
+
+            <h3>
+                Quick Links
+            </h3>
+
+            <a href="#home">
+                Home
+            </a>
+
+            <a href="#about">
+                About
+            </a>
+
+            <a href="#courses">
+                Courses
+            </a>
+
+            <a href="#teacher">
+                Teacher
+            </a>
+
+            <a href="#admission">
+                Admission
+            </a>
+
+        </div>
+
+
+        <div>
+
+            <h3>
+                Quran Courses
+            </h3>
+
+            <a href="#courses">
+                Nazra Quran
+            </a>
+
+            <a href="#courses">
+                Tajweed
+            </a>
+
+            <a href="#courses">
+                Hifz-ul-Quran
+            </a>
+
+            <a href="#courses">
+                Quran Translation
+            </a>
+
+            <a href="#courses">
+                Islamic Studies
+            </a>
+
+        </div>
+
+
+    </div>
+
+
+    <div class="copyright">
+
+        © 2026 Noor-ul-Huda Quran Academy
+
+        <br>
+
+        <span>
+            Hafiz Muhammad Shameer
+        </span>
+
+    </div>
+
+
+</footer>
+
+
+
+<!-- =====================================================
+     FLOATING WHATSAPP
+===================================================== -->
+
+<a
+    href="#contact"
+    class="floating-whatsapp"
+    title="WhatsApp">
+
+    ☎
+
+</a>
+
+
+
+<!-- =====================================================
+     COURSE DETAILS MODAL
+===================================================== -->
+
+<div class="modal" id="courseModal">
+
+
+    <div class="modal-content">
+
+
+        <span
+            class="close"
+            onclick="closeCourse()">
+
+            ×
+
+        </span>
+
+
+        <div id="modalContent"></div>
+
+
+    </div>
+
+</div>
+
+
+
+<!-- =====================================================
+     JAVASCRIPT
+===================================================== -->
+
+<script>
+
+
+/* =====================================================
+   COURSE DATA
+===================================================== */
+
+const courses = {
+
+
+    nazra: {
+
+        title:
+            "📖 Nazra Quran — ناظرہ قرآن",
+
+        subtitle:
+            "Quran Reading Course",
+
+        text: `
+
+            <p>
+                This course is designed for students who want
+                to learn to read the Holy Quran correctly.
+            </p>
+
+            <h3>
+                Course Includes
+            </h3>
+
+            <ul>
+
+                <li>
+                    Arabic letters
+                </li>
+
+                <li>
+                    Harakaat
+                </li>
+
+                <li>
+                    Correct pronunciation
+                </li>
+
+                <li>
+                    Quran reading practice
+                </li>
+
+                <li>
+                    Daily lesson and revision
+                </li>
+
+            </ul>
+
+            <p>
+                ناظرہ قرآن میں طالب علم قرآنِ کریم کو
+                درست انداز میں پڑھنے کی مشق کرتا ہے۔
+            </p>
+
+        `
+
+    },
+
+
+    tajweed: {
+
+        title:
+            "🎙️ Quran with Tajweed — تجوید القرآن",
+
+        subtitle:
+            "Correct Quranic Recitation",
+
+        text: `
+
+            <p>
+                Learn the basic rules of Tajweed and improve
+                your Quranic pronunciation.
+            </p>
+
+            <h3>
+                Main Topics
+            </h3>
+
+            <ul>
+
+                <li>
+                    Makharij-ul-Huroof
+                </li>
+
+                <li>
+                    Sifaat-ul-Huroof
+                </li>
+
+                <li>
+                    Madd
+                </li>
+
+                <li>
+                    Ghunnah
+                </li>
+
+                <li>
+                    Qalqalah
+                </li>
+
+                <li>
+                    Noon Saakin and Tanween
+                </li>
+
+                <li>
+                    Meem Saakin
+                </li>
+
+            </ul>
+
+            <p>
+                مقصد قرآنِ کریم کو صحیح تلفظ اور بنیادی
+                تجویدی اصولوں کے مطابق پڑھنا ہے۔
+            </p>
+
+        `
+
+    },
+
+
+    hifz: {
+
+        title:
+            "🕌 Hifz-ul-Quran — حفظ القرآن",
+
+        subtitle:
+            "Quran Memorization",
+
+        text: `
+
+            <p>
+                A structured Quran memorization program
+                with regular revision and practice.
+            </p>
+
+            <h3>
+                Hifz System
+            </h3>
+
+            <ul>
+
+                <li>
+                    Daily new lesson
+                </li>
+
+                <li>
+                    Sabqi
+                </li>
+
+                <li>
+                    Manzil
+                </li>
+
+                <li>
+                    Regular revision
+                </li>
+
+                <li>
+                    Recitation correction
+                </li>
+
+            </ul>
+
+        `
+
+    },
+
+
+    translation: {
+
+        title:
+            "🌙 Quran Translation — ترجمہ قرآن",
+
+        subtitle:
+            "Understanding the Quran",
+
+        text: `
+
+            <p>
+                Learn the basic meaning of Quranic verses
+                and important Quranic vocabulary.
+            </p>
+
+            <h3>
+                Course Includes
+            </h3>
+
+            <ul>
+
+                <li>
+                    Important Quranic words
+                </li>
+
+                <li>
+                    Easy translation
+                </li>
+
+                <li>
+                    Basic explanation
+                </li>
+
+                <li>
+                    Lesson summary
+                </li>
+
+            </ul>
+
+        `
+
+    },
+
+
+    kids: {
+
+        title:
+            "👦 Quran for Kids — بچوں کا قرآن کورس",
+
+        subtitle:
+            "Easy Quran Learning for Children",
+
+        text: `
+
+            <p>
+                A simple and friendly learning program
+                for children.
+            </p>
+
+            <h3>
+                Children Can Learn
+            </h3>
+
+            <ul>
+
+                <li>
+                    Noorani Qaida
+                </li>
+
+                <li>
+                    Nazra Quran
+                </li>
+
+                <li>
+                    Short Surahs
+                </li>
+
+                <li>
+                    Daily Duas
+                </li>
+
+                <li>
+                    Salah basics
+                </li>
+
+                <li>
+                    Islamic manners
+                </li>
+
+            </ul>
+
+        `
+
+    },
+
+
+    islamic: {
+
+        title:
+            "🤲 Islamic Studies — اسلامی تعلیمات",
+
+        subtitle:
+            "Basic Islamic Education",
+
+        text: `
+
+            <p>
+                Basic Islamic knowledge for children
+                and beginners.
+            </p>
+
+            <h3>
+                Topics
+            </h3>
+
+            <ul>
+
+                <li>
+                    Kalimas
+                </li>
+
+                <li>
+                    Wudu
+                </li>
+
+                <li>
+                    Salah
+                </li>
+
+                <li>
+                    Daily Duas
+                </li>
+
+                <li>
+                    Islamic manners
+                </li>
+
+                <li>
+                    Good character
+                </li>
+
+            </ul>
+
+        `
+
+    }
+
+};
+
+
+
+/* =====================================================
+   OPEN COURSE
+===================================================== */
+
+function openCourse(courseName) {
+
+
+    const course =
+        courses[courseName];
+
+
+    if (!course)
+        return;
+
+
+    document.getElementById("modalContent").innerHTML = `
+
+        <h2>
+            ${course.title}
+        </h2>
+
+        <p style="
+            color:#a77c14;
+            font-weight:bold;
+            margin-bottom:20px;
+        ">
+
+            ${course.subtitle}
+
+        </p>
+
+        ${course.text}
+
+        <br>
+
+        <a
+            href="#contact"
+            onclick="closeCourse()"
+            class="btn btn-gold">
+
+            📱 Contact Academy
+
+        </a>
+
+    `;
+
+
+    document.getElementById("courseModal").style.display =
+        "flex";
+
+}
+
+
+
+/* =====================================================
+   CLOSE COURSE
+===================================================== */
+
+function closeCourse() {
+
+    document.getElementById("courseModal").style.display =
+        "none";
+
+}
+
+
+
+/* =====================================================
+   CLOSE MODAL OUTSIDE
+===================================================== */
+
+window.onclick = function(event) {
+
+    const modal =
+        document.getElementById("courseModal");
+
+
+    if (event.target === modal) {
+
+        closeCourse();
+
+    }
+
+};
+
+
+
+/* =====================================================
+   ADMISSION FORM
+===================================================== */
+
+function submitAdmission(event) {
+
+    event.preventDefault();
+
+
+    const name =
+        document.getElementById("studentName").value;
+
+
+    const course =
+        document.getElementById("course").value;
+
+
+    alert(
+
+        "Thank you, " +
+        name +
+        "!\n\n" +
+
+        "Your admission request for " +
+        course +
+        " has been prepared.\n\n" +
+
+        "Please contact Noor-ul-Huda Quran Academy through WhatsApp."
+
+    );
+
+}
+
+
+
+/* =====================================================
+   WHATSAPP NUMBER
+===================================================== */
+
+function showNumberMessage() {
+
+    alert(
+
+        "WhatsApp Number:\n\n" +
+
+        "03-11-99-03-11-99-2-09-86\n\n" +
+
+        "اپنا درست WhatsApp نمبر ملنے کے بعد\n" +
+
+        "اسے WhatsApp link میں شامل کیا جا سکتا ہے۔"
+
+    );
+
+}
+
+
+
+/* =====================================================
+   HEADER SCROLL EFFECT
+===================================================== */
+
+window.addEventListener(
+    "scroll",
+    function() {
+
+        const header =
+            document.querySelector("header");
+
+
+        if (window.scrollY > 50) {
+
+            header.style.boxShadow =
+                "0 7px 30px rgba(0,0,0,0.15)";
+
+        }
+
+        else {
+
+            header.style.boxShadow =
+                "0 5px 25px rgba(0,0,0,0.08)";
+
+        }
+
+    }
+);
+
+
+</script>
+
+
+</body>
+
+</html>
+```
